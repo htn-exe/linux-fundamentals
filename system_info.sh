@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "========================================="
+echo "        SYSTEM INFORMATION REPORT"
+echo "========================================="
+echo ""
+
+echo "--- KERNEL & SYSTEM ---"
+uname -a
+echo ""
+
+echo "--- CURRENT USER ---"
+whoami
+id
+echo ""
+
+echo "--- ALL USERS ---"
+cat /etc/passwd | cut -d: -f1,3,7
+echo ""
+
+echo "--- RUNNING PROCESSES ---"
+ps aux --no-headers | wc -l
+echo "processes running"
+echo ""
+
+echo "--- MEMORY USAGE ---"
+free -h
+echo ""
+
+echo "--- DISK USAGE ---"
+df -h
+echo ""
+
+echo "--- NETWORK INTERFACES ---"
+ip a
+echo ""
+
+echo "========================================="
+echo "        END OF REPORT"
+echo "========================================="
