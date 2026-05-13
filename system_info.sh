@@ -35,6 +35,18 @@ echo "--- NETWORK INTERFACES ---"
 ip a
 echo ""
 
+echo "--- IMPORTANT LOG EVENTS ---"
+sudo journalctl -n 10 --no-pager | grep -i "sudo\|session\|failed"
+echo ""
+
+echo "--- PATH ---"
+echo $PATH
+echo ""
+
+echo "--- FILESYSTEM ROOT ---"
+ls /
+echo ""
+
 echo "========================================="
 echo "        END OF REPORT"
 echo "========================================="
