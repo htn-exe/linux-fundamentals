@@ -47,6 +47,10 @@ echo "--- FILESYSTEM ROOT ---"
 ls /
 echo ""
 
+echo "--- SUID BINARIES ---"
+find / -perm -4000 2>/dev/null
+echo ""
+
 echo "========================================="
 echo "        END OF REPORT"
 echo "========================================="
